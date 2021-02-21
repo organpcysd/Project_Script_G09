@@ -2,11 +2,8 @@
 <?php
     include('header.php');
 ?>
-<
+
 <div class="d-flex justify-content-center">
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title text-center">เข้าสู่ระบบ</h5>
     <form method="POST" action = "check.php">
   <div class="form-group">
     <label>Username</label>
@@ -20,6 +17,4 @@
   </div>
   <button type="submit" class="btn btn-primary">Login</button>
 </form>
-  </div>
-</div>
 </div>
