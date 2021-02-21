@@ -1,11 +1,11 @@
 <?php
 // connect to the database
-$conn = mysqli_connect("play-hippy.net", "root", "Organ18032543","donatecenter");
-if(!$conn) {
+$con = mysqli_connect("play-hippy.net", "root", "Organ18032543","donatecenter");
+if(!$con) {
     die("Could not connect: " . mysqli_error());
   }else{
-  echo "Database Connected!";
+  echo "";
   }
-$conn->query("SET NAMES UTF8");
+$con->query("SET NAMES UTF8");
 
 ?>
