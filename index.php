@@ -7,11 +7,18 @@
         if (!isset($_SESSION['username'])) {
             include("navbar.php");
         }else{
-            include("navbar_login.php");
             $username = $_SESSION['username'];
             $sql = "SELECT * FROM user WHERE username = '" . $username . "'";
             $rs = mysqli_query($con,$sql);
             $data = mysqli_fetch_array($rs);
+
+            if ($data['user_type']==1) {
+                    include("navbar_user.php");
+            }elseif ($data['user_type']==2) {
+                    include("navbar_employee.php");
+            }elseif ($data['user_type']==3) {
+                    include("navbar_admin.php");
+        }
         }
 	?>
 </head>
@@ -19,12 +26,12 @@
     <div class="container">
         <?php
         if (!isset($_SESSION['username'])) {
-            echo "HI INDEX!";
+            include('content.php');
         ?>
         <?php
         }else{
             if ($data['user_type']==1){
-                echo "HI User!";
+                include('content.php');
             }elseif ($data['user_type']==2) {
                 echo "Hi employee";
             }elseif ($data['user_type']==3) {
