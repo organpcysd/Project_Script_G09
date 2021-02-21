@@ -26,12 +26,12 @@
     <div class="container">
         <?php
         if (!isset($_SESSION['username'])) {
-            echo "HI INDEX!";
+            include('content.php');
         ?>
         <?php
         }else{
             if ($data['user_type']==1){
-                echo "HI User!";
+                include('content.php');
             }elseif ($data['user_type']==2) {
                 echo "Hi employee";
             }elseif ($data['user_type']==3) {
