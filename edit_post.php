@@ -3,15 +3,17 @@
 <?php
   include("db.php");
   include("header.php");
+  session_start();
   $id = $_GET["ID"];
+  $_SESSION["conid"] = $id;  
   $sql="SELECT*FROM content WHERE ID = $id";    
   $rs=$con->query($sql);
-  $row = $rs->fetch_assoc()
-  
+  $row = $rs->fetch_assoc();
+  $check = $row['content_check'];
 ?>
 
 <body>
-<form action="inser_editpost.php" method="post" enctype="multipart/form-data">
+<form action="insert_editpost.php" method="post" enctype="multipart/form-data">
 
 <div class="container p-3 my-3 border">
 <legend>แบบฟอร์มเสนอมูลนิธิ สถานที่ รับบริจาค</legend>
@@ -21,14 +23,15 @@
 
 <br>
     <b>รายละเอียดการรับบริจาค</b> <br>
-    <textarea id="Detail"  rows="4" cols="50" name="detail" value="<?php echo $row['detail'] ?>" >
+    <textarea id="Detail"  rows="4" cols="50" name="detail" value="" >
+    <?php echo $row['detail'] ?>
     </textarea>
     <br>   
     <b>ข้อมูลการติดต่อ </b><br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;
  • ที่อยู่ <br>
-<textarea id="Address"  rows="2" cols="50" name="address" value="<?php echo $row['address'] ?>"> </textarea> <br>
+<textarea id="Address"  rows="2" cols="50" name="address" value=""><?php echo $row['address'] ?> </textarea> <br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 • เบอร์โทร <br>
@@ -45,47 +48,40 @@
 &nbsp;&nbsp;&nbsp;&nbsp;
 • หมวดหมู่
 <br>
-<input type="text" id="content_type"name="content_type" value="<?php echo $row['content_type'] ?>"> 
+<select name="content_type" id="categories" value="">
+<?php if ($row['content_type'] == "สัตว์") { ?>
+<option ><?php echo $row['content_type'] ?></option>
+<option >การศึกษา</option>
+<option >มูลนิธิต่างๆ</option>
+<?php } elseif ($row['content_type'] == "การศึกษา") { ?>
+<option ><?php echo $row['content_type'] ?></option>
+<option >สัตว์</option>
+<option >มูลนิธิต่างๆ</option>
+<?php } else{ ?>
+<option ><?php echo $row['content_type'] ?></option>
+<option >สัตว์</option>
+<option >มูลนิธิต่างๆ</option>
+<?php } ?>
+</select>
 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;
 • สถานะโพส 
 <br>
-<select name="content_check" id="categories" value="<?php echo $row['content_check'] ?>" >
-<option >ตรวจสอบเเล้ว</option>
+<select name="content_check" id="categories" value="" ><?php echo $row['content_check'] ?>
+<?php if ($row['content_check'] == "ตรวจสอบเเล้ว") { ?>
+<option ><?php echo $row['content_check'] ?></option>
 <option >ยังไม่ได้ตรวจสอบ</option>
+<?php } else { ?>
+<option ><?php echo $row['content_check'] ?></option>
+<option >ตรวจสอบเเล้ว</option>
+<?php } ?>
 </select>
 <br>
 <br>
 <input type="submit" class="btn btn-success" name="Save" value="Save">
-<input type="reset" class="btn btn-primary " value="ล้างข้อมูล"></TD></TR>
 
 </form>
 </Table>
 </body>
 </html>
-
-<?php
-if (isset($_POST['Save'])) {
-            $username = $_POST["username"];
-            $Topic = $_POST["topic"];
-            $Detail = $_POST["detail"];
-            $Address = $_POST["address"];
-            $Tel = $_POST['tel'];
-            $Email = $_POST["email"];
-            $Social = $_POST["social"];
-            $Images = $_FILES["images"]["name"];
-            $Content_type = $_REQUEST['content_type'];
-
-    $sql= "INSERT INTO content (username,topic,detail,address,tel,email,social,images,content_type) values ('$username','$Topic','$Detail','$Address','$Tel','$Email','$Social','$Images','$Content_type')";
- //if press Login
-    if ($con->query($sql) == true) {
-        move_uploaded_file($_FILES["images"]["tmp_name"], "images/content/".$_FILES["images"]["name"]); ?>
-    <div class="alert alert-success" role="alert">
-        ส่งแบบฟอร์มสำเร็จ
-    </div>
-    <?php
-    } else {
-        echo "Error Insert record: " . $con->error;
-    }
-}
-?> 
     
