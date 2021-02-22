@@ -3,10 +3,20 @@
 <?php
   include("db.php");
   include("header.php");
+      session_start();
+      if (!isset($_SESSION['username'])) {
+          include("navbar.php");
+      }else{
+          $username = $_SESSION['username'];
+          $sql = "SELECT * FROM user WHERE username = '" . $username . "'";
+          $rs = mysqli_query($con,$sql);
+          $data = mysqli_fetch_array($rs);
+          include("navbar_user.php");
+      }
 ?>
 
 <body>
-<form action="insert.php" method="post">
+<form action="insert.php" method="post" enctype="multipart/form-data">
 
 <div class="container p-3 my-3 border">
 <legend>แบบฟอร์มเสนอมูลนิธิ สถานที่ รับบริจาค</legend>

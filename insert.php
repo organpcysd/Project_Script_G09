@@ -2,17 +2,7 @@
 
 // connect to the database
 $con = mysqli_connect("play-hippy.net", "root", "Organ18032543","donatecenter");
-if(!$con) {
-    die("Could not connect: " . mysqli_error());
-  }else{
-  echo "";
-  }
-  if(move_uploaded_file($_FILES["images"]["tmp_name"],"images/".$_FILES["images"]["name"]))
-        {
-            echo "Copy/Upload Complete<br>";
-    
-    
-        }
+
 $con->query("SET NAMES UTF8");
 
             $Topic = $_POST["topic"];
@@ -21,17 +11,18 @@ $con->query("SET NAMES UTF8");
             $Tel = $_POST['tel'];
             $Email = $_POST["email"];
             $Social = $_POST["social"];
-            $Images = $_POST["images"];
+            $Images = $_FILES["images"]["name"];
 
 
 
-$sql= "INSERT INTO content (topic,datail,address,tel,email,social,images) values ('$Topic,$Detail,$Address,$Tel,$Email,$Social,$Images)";
+$sql= "INSERT INTO content (topic,detail,address,tel,email,social,images,content_type) values ('$Topic','$Detail','$Address','$Tel','$Email','$Social','$Images','dog')";
 
 
 if ($con->query($sql) == TRUE) {
+    move_uploaded_file($_FILES["images"]["tmp_name"],"images/content/".$_FILES["images"]["name"]);
     echo " Insertion Successfully!! ";
 } else {
-    echo "Error updating record: " . $con->error;
+    echo "Error Insert record: " . $con->error;
 }
 
 echo '<br> <a href="index.php"> Go to home </a></td>';
