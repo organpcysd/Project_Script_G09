@@ -5,7 +5,6 @@ $us = $_POST['username'];
 $fn = $_POST['fullname'];
 $ps = $_POST['password'];
 $em = $_POST['email'];
-<<<<<<< Updated upstream
 $im = $_FILES['image']['name'];
 $sql1 = "ALTER TABLE user AUTO_INCREMENT = 1";
 $con->query("SET NAMES UTF8");    
@@ -17,7 +16,6 @@ if ($con->query($sql) === true) {
 } else {
     echo "Error updating record: " . $con->error;
 }
-=======
 $im = $_POST['image'];
 
 
@@ -31,6 +29,5 @@ if ($conn->query($sql) === TRUE) {
     echo "Error updating record: " . $conn->error;
 }
 
->>>>>>> Stashed changes
 echo '<br> <a href="adminmanage.php"> Go to home </a></td>';
 ?>
