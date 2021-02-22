@@ -30,7 +30,11 @@
                 echo "<br/> <a href='manage_post.php'" . " class='"."btn btn-outline-primary btn-sm'".">จัดการโพสต์</a>";
                 include('content.php');
             }elseif ($data['user_type']==3) {
+<<<<<<< Updated upstream
                 echo "<br/> <a href='manage_post.php'" . " class='"."btn btn-outline-primary btn-sm'".">จัดการโพสต์</a>" . " " . "<a href=''" . " class='"."btn btn-outline-primary btn-sm'".">จัดการข้อมูลผู้ใช้</a>";
+=======
+                echo "<br/> <a href='manage_post.php'" . " class='"."btn btn-outline-primary btn-sm'".">จัดการโพสต์</a>" . " " . "<a href='adminmanage.php'" . " class='"."btn btn-outline-primary btn-sm'".">จัดการข้อมูลผู้ใช้</a>";
+>>>>>>> Stashed changes
                 include('content.php');
             }else {
                 echo "Who?";

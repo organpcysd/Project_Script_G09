@@ -6,7 +6,6 @@ $query = "SELECT * FROM content ORDER BY id asc" or die("Error:" . mysqli_error(
 $result = mysqli_query($con, $query); 
 
 echo "<div class='container p-3 my-3 border'>";
-echo "<table border='1' align='center' width='500'>";
 echo "<table class='table table-sm'>";
 ?>
 
@@ -27,5 +26,5 @@ while ($row = mysqli_fetch_array($result)) {
 <?php
 }
 mysqli_close($con);
+echo "</div>";
 ?>
-</div>
