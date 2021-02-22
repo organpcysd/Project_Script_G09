@@ -28,24 +28,34 @@
 <body>
     <div class="container" ><center>
     <table class="usermange" style="align:center" >
-      <tr>
+      <tr><br>
                     <th> Username : </th>
                     <td> <input type = "text" name = "name0" id = "name0" value = <?php   echo "" .$data ["username"] ;?>></td>
                 </tr>
-                 <tr>
+
+                 <tr><br>
                     <th> Fullname : </th>
                     <td> <input type = "text" name= "fullname0" id= "fullname0" value = <?php   echo "" .$data ["fullname"] ;?>></td>
-                </tr> <tr>
-                    <th> Image : </th>
-                    <td> <input type = "text" name = "image0" id= "image0" value = <?php   echo "" .$data ["image"] ;?>></td>
-                </tr> <tr>
+                </tr> 
+
+                <tr>
                     <th> Email : </th>
                     <td> <input type = "text" name = "email0" id= "email0" value = <?php   echo "" .$data ["email"] ;?>></td>
+                </tr> 
+                
+                <tr>
+                    <th> Tel : </th>
+                    <td> <input type = "text" name = "tel0" id= "tel0" value = <?php   echo "" .$data ["tel"] ;?>></td>
                 </tr>
-     
+
+                <tr>
+                    <th> Image : </th>
+                    <td> <input type = "text" name = "image0" id= "image0" value = <?php   echo "" .$data ["image"] ;?>></td>
+                </tr>
+
      
     </table>
-    <input type="submit" value="บันทึก">
+    <input type="submit" value="Save">
 
     </div>
 
