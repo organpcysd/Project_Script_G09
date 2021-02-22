@@ -29,7 +29,7 @@
 <br>
 
     <b>รายละเอียดการรับบริจาค</b> <br>
-    <textarea id="Detail"  rows="4" cols="50" name="detail" >
+    <textarea id="Detail"  rows="5" cols="50" name="detail" >
     </textarea>
     <br>
     
