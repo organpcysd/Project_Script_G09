@@ -23,6 +23,8 @@ while ($row = mysqli_fetch_array($result)) {
         <center><a href="content_details.php?ID='<?php echo $row['id']; ?>'" class="btn btn-primary">รายละเอียด</a></center>
       </div>
     </div>
+    <br/>
+    <br/>
   </div>
 <?php
 }

@@ -1,11 +1,10 @@
 <?php
-
-
 // connect to the database
 $con = mysqli_connect("play-hippy.net", "root", "Organ18032543","donatecenter");
 
 $con->query("SET NAMES UTF8");
-
+            
+            $username = $_POST["username"];
             $Topic = $_POST["topic"];
             $Detail = $_POST["detail"];
             $Address = $_POST["address"];
@@ -16,7 +15,7 @@ $con->query("SET NAMES UTF8");
             $Content_type = $_REQUEST['content_type'];
 
 
-$sql= "INSERT INTO content (topic,detail,address,tel,email,social,images,content_type) values ('$Topic','$Detail','$Address','$Tel','$Email','$Social','$Images','$Content_type')";
+$sql= "INSERT INTO content (username,topic,detail,address,tel,email,social,images,content_type) values ('$username','$Topic','$Detail','$Address','$Tel','$Email','$Social','$Images','$Content_type')";
 
 
 if ($con->query($sql) == TRUE) {

@@ -8,7 +8,7 @@
           </a>
          <!-- Navbar Login,Register -->
           <div>
-            <a href="#" class="btn btn-outline-primary btn-sm">จัดการบัญชี</a>
+            <a href="edit_pro.php" class="btn btn-outline-primary btn-sm">จัดการบัญชี</a>
             <a href="logout.php" class="btn btn-danger btn-sm">ออกจากระบบ</a>
           </div>
         </div>
