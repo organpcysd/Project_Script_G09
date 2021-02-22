@@ -53,7 +53,7 @@
     <td align = "center"> <img src="images/user/<?php echo $row['image'] ?>" width="50"> </td>
     <td align = "center"> <?php echo $row['email'] ?> </td>
     <td align = "center"> <?php echo $row['user_type'] ?> </td>
-    <td align = "center"> <a href="edit_admin.php?ID='<?php echo $row['ID']; ?>'">Edit</a> <a href="delete.php?ID=' <?php echo $row['ID']; ?> '" onclick="return confirm('Are you sure to delete #id' + <?php echo $row['ID']; ?> + ' ?' );">Delete</a></td>
+    <td align = "center"> <a href="edit_admin.php?ID='<?php echo $row['id']; ?>'">Edit</a> <a href="delete.php?ID=' <?php echo $row['id']; ?> '" onclick="return confirm('Are you sure to delete #id' + <?php echo $row['ID']; ?> + ' ?' );">Delete</a></td>
     </tr>
     <?php
     }
