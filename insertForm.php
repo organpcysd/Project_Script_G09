@@ -16,7 +16,7 @@
 ?>
 
 <body>
-<form action="insert.php" method="post">
+<form action="insert.php" method="post" enctype="multipart/form-data">
 
 <div class="container p-3 my-3 border">
 <legend>แบบฟอร์มเสนอมูลนิธิ สถานที่ รับบริจาค</legend>
