@@ -1,38 +1,20 @@
-<<<<<<< Updated upstream
-<?php
-include("db.php");
-$img = $_FILES['image']['name'];
-$id = $_POST['id'];
-$us = $_POST['username'];
-$pw = $_POST['password'];
-$fn = $_POST['fullname'];
-$em = $_POST['email'];
-
-
-$sql="UPDATE user SET username='$us',password='$pw',fullname='$fn',email='$em',image = '$img' WHERE id = $id";
-
-if ($con->query($sql) == TRUE) {
-    move_uploaded_file($_FILES["image"]["tmp_name"], "images/user/" . $_FILES["image"]["name"]);
-    echo "Update Successfully";
-} else {
-    echo "Error updating record: " . $conn->error;
-}
-
-echo '<br> <a href="adminmanage.php"> Go to home </a></td>';
-
-?>
-=======
 <!DOCTYPE html>
 <?php
     
     include("header.php");
     include("db.php");
-   
+    $id = $_GET["ID"];
+
+    $sql="SELECT*FROM user WHERE ID = $id";    
+    $rs=$con->query($sql);
+    $row = $rs->fetch_assoc()
     
 ?>
 
-<body >
-    <form action="edit_admin2.php" method="POST" >
+
+<body>
+    <center>
+    <form action="edit_admin.php" method="POST" enctype="multipart/form-data">
     
         <table >
             <tr>
@@ -40,7 +22,7 @@ echo '<br> <a href="adminmanage.php"> Go to home </a></td>';
                     ID :
                 </td>
                 <td>
-                    <input type = "text" name = "id"  value = "<?php echo $row['id'] ?>">
+                    <input type = "text" name = "id" value = "<?php echo $row['id'] ?>">
                 </td>
             </tr>
 
@@ -76,7 +58,8 @@ echo '<br> <a href="adminmanage.php"> Go to home </a></td>';
                 Images :
                 </td>
                 <td>
-                    <input type = "text" name = "images" value = "<?php echo $row['images'] ?>">
+                    <img src="images/user/<?php echo $row['image'] ?>" width="50">
+                    <input type="file" name="image" required>
                 </td>
             </tr>
 
@@ -92,13 +75,11 @@ echo '<br> <a href="adminmanage.php"> Go to home </a></td>';
             <td>
                     
                     <input type = "submit" value="Save" name = "Save">
-                    <input type="button" onclick="location.href='view.php'" value="Cancel" />
+                    <input type="button" onclick="location.href='adminmanage.php'" value="Cancel" />
                 </td>
 
         </table>
-
-
     </form>
+    </center>
 </body>
 </html>
->>>>>>> Stashed changes

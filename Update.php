@@ -37,4 +37,4 @@
         }
 
         echo '<br> <a href="view.php"> Go to home </a></td>';
-   ?>
+?>
