@@ -13,11 +13,33 @@
            include("navbar_user.php");
        }
        ?>
-<body>
+
+
 <div class="container p-3 my-3 border">
   <fieldset>
     <legend>โพสต์ของฉัน</legend>
-   
+    <body>
+    <div class="container">
+        <?php
+        if (!isset($_SESSION['username'])) {
+            include('content.php');
+        ?>
+        <?php
+        }else{                                                            
+            if ($data['user_type']==1){
+                echo "<br/> <a href="."insertForm.php" . " class='"."btn btn-outline-primary btn-sm'".">สร้างโพสต์</a>" ;
+                include('content.php');
+            }elseif ($data['user_type']==2) {
+                echo "<br/> <a href=''" . " class='"."btn btn-outline-primary btn-sm'".">แก้ไขโพสต์</a>";
+            }elseif ($data['user_type']==3) {
+                echo "<br/> <a href=''" . " class='"."btn btn-outline-primary btn-sm'".">สร้างโพสต์</a>" . " " . "<a href=''" . " class='"."btn btn-outline-primary btn-sm'".">แก้ไขข้อมูลผู้ใช้</a>";
+            }else {
+                echo "Who?";
+            }
+            echo "<a href="."logout.php".">ออกจากระบบ</a>";
+        }
+        ?>
+    </div>
 </div>
 </body>
 </html>

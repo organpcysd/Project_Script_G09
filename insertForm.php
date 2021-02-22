@@ -16,7 +16,7 @@
 ?>
 
 <body>
-<form action="insert.php" method="post">
+<form action="insert.php" method="post" enctype="multipart/form-data">
 
 <div class="container p-3 my-3 border">
 <legend>แบบฟอร์มเสนอมูลนิธิ สถานที่ รับบริจาค</legend>
@@ -53,7 +53,14 @@
 <br>
 <input type="file"id="Images" name="images"><br>
 <br>
+• หมวดหมู่
+<br>
+<input type="radio" name="content_type" value="education"> การศึกษา &nbsp;
+<input type="radio" name="content_type" value="animal"> สัตว์ &nbsp;
+<input type="radio" name="content_type" value="donate"> มูลนิธิต่าง ๆ
 
+<br>
+<br>
 <input type="submit" class="btn btn-success" name="Save" value="Save">
 <input type="reset" class="btn btn-primary " value="ล้างข้อมูล"></TD></TR>
 
