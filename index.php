@@ -29,7 +29,7 @@
             }elseif ($data['user_type']==2) {
                 echo "<br/> <a href=''" . " class='"."btn btn-outline-primary btn-sm'".">แก้ไขโพสต์</a>";
             }elseif ($data['user_type']==3) {
-                echo "<br/> <a href=''" . " class='"."btn btn-outline-primary btn-sm'".">สร้างโพสต์</a>" . " " . "<a href=''" . " class='"."btn btn-outline-primary btn-sm'".">แก้ไขข้อมูลผู้ใช้</a>";
+                echo "<br/> <a href=''" . " class='"."btn btn-outline-primary btn-sm'".">แก้ไขโพสต์</a>" . " " . "<a href=''" . " class='"."btn btn-outline-primary btn-sm'".">แก้ไขข้อมูลผู้ใช้</a>";
             }else {
                 echo "Who?";
             }
