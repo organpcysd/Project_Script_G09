@@ -22,6 +22,7 @@
 </head>
 <center>
 <table class="table table-hover table-responsive-xl">
+<a class = "btn btn-outline-danger btn-sm" a href="insertForm_admin.php">Insert</a>
   <body>
       <?php
       if (isset($_GET["search"])) {
