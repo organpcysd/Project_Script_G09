@@ -23,7 +23,6 @@
         ?>
 
 <?php
-$us = $_POST["username"];
 $fullname = $_POST["fullname"];
 $password = $_POST["password"];
 $email = $_POST["email"];
@@ -31,7 +30,7 @@ $image = $_FILES["image"]["name"];
 $con = mysqli_connect("play-hippy.net", "root", "Organ18032543","donatecenter");
 $con->query("SET NAMES UTF8");
 // get results from database
-$sql="UPDATE user SET username ='$us',fullname ='$fullname',password ='$password',email ='$email',image ='$image' WHERE username = '$username'";
+$sql="UPDATE user SET fullname ='$fullname',password ='$password',email ='$email',image ='$image' WHERE username = '$username'";
 $rs = mysqli_query($con,$sql);
 
 if ($con->query($sql) == TRUE) {
