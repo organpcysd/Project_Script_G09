@@ -2,6 +2,11 @@
 <?php
     include('header.php');
 ?>
+<head>
+<?php
+  include('navbar.php');
+?>
+</head>
 
 <div class="d-flex justify-content-center">
     <form method="POST" action = "check.php">
