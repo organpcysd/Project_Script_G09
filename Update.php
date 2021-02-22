@@ -18,19 +18,23 @@
                     include("navbar_employee.php");
             }elseif ($data['user_type']==3) {
                     include("navbar_admin.php");
-        }
-        }
         
-                    $us  = $_POST["username0"];
-                    $fn   = $_POST["fullname0"];
-                    $em      = $_POST["email0"];
-                    $tt   = $_POST["tel0"];
-                    $im      = $_POST["images0"];
-	?>
 
-    <?php   $qry = "UPDATE 'user'
-                                                WHERE username  = $us, fullname = $fn, email = $em, tel = $tt, images = $im ";
-    $result = mysqli_query($con,$qry);
-    if(!$result){
-        echo "Error";
-    } else echo "เพิ่มข้อมูลสำเร็จ"; ?>
+        $us = $_POST['username0'];
+        $fn = $_POST['fullname0'];
+        $em = $_POST['email0'];
+        $im = $_POST['images0'];
+        $con = mysqli_connect("play-hippy.net", "root", "Organ18032543","donatecenter");
+        $conn->query("SET NAMES UTF8");
+        // get results from database
+        $sql="UPDATE db SET username0='$us',fullname0='$fn',email0='$em',images0='$im' WHERE ID = $id";
+        $result=$conn->query($sql);
+
+        if ($rs) {
+        echo "Update Successfully";
+        } else {
+        echo "Error updating record: " . $conn->error;
+        }
+
+        echo '<br> <a href="view.php"> Go to home </a></td>';
+   ?>
