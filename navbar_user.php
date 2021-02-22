@@ -38,7 +38,7 @@
                 });
 
                 $("#ava5").click(function(){
-                   $("body").css("backgroundColor","#a98b98");
+                   $("body").css("backgroundColor","#c9cbff");
                 });
 
                 $("#ava6").click(function(){
