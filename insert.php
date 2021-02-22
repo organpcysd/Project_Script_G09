@@ -12,11 +12,10 @@ $con->query("SET NAMES UTF8");
             $Email = $_POST["email"];
             $Social = $_POST["social"];
             $Images = $_FILES["images"]["name"];
-            
+            $Content_type = $_REQUEST['content_type'];
 
 
-
-$sql= "INSERT INTO content (topic,detail,address,tel,email,social,images,content_type) values ('$Topic','$Detail','$Address','$Tel','$Email','$Social','$Images','dog')";
+$sql= "INSERT INTO content (topic,detail,address,tel,email,social,images,content_type) values ('$Topic','$Detail','$Address','$Tel','$Email','$Social','$Images','$Content_type')";
 
 
 if ($con->query($sql) == TRUE) {

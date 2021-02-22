@@ -55,9 +55,9 @@
 <br>
 • หมวดหมู่
 <br>
-<input type="radio" name="education" value="education"> การศึกษา &nbsp;
-<input type="radio" name="animal" value="animal"> สัตว์ &nbsp;
-<input type="radio" name="donate" value="donate"> มูลนิธิต่าง ๆ
+<input type="radio" name="content_type" value="education"> การศึกษา &nbsp;
+<input type="radio" name="content_type" value="animal"> สัตว์ &nbsp;
+<input type="radio" name="content_type" value="donate"> มูลนิธิต่าง ๆ
 
 <br>
 <br>
