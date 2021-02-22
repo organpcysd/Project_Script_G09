@@ -8,8 +8,8 @@
           </a>
          <!-- Navbar Login,Register -->
           <div>
-            <a href="login.php" class="btn btn-success btn-sm">Log in</a>
-            <a href="register.php" class="btn btn-outline-success btn-sm">Register</a>
+            <a href="login.php" class="btn btn-success btn-sm">เข้าสู่ระบบ</a>
+            <a href="register.php" class="btn btn-outline-success btn-sm">สมัครสมาชิก</a>
           </div>
         </div>
     </nav>

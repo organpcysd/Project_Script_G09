@@ -5,7 +5,6 @@ include('db.php');
 $query = "SELECT * FROM content ORDER BY id asc" or die("Error:" . mysqli_error()); 
 $result = mysqli_query($con, $query); 
 
-//4 . แสดงข้อมูลที่ query ออกมา โดยใช้ตารางในการจัดข้อมูล: 
 echo "<div class='container p-3 my-3 border'>";
 echo "<table border='1' align='center' width='500'>";
 echo "<table class='table table-sm'>";

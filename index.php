@@ -11,14 +11,7 @@
             $sql = "SELECT * FROM user WHERE username = '" . $username . "'";
             $rs = mysqli_query($con,$sql);
             $data = mysqli_fetch_array($rs);
-
-            if ($data['user_type']==1) {
-                    include("navbar_user.php");
-            }elseif ($data['user_type']==2) {
-                    include("navbar_employee.php");
-            }elseif ($data['user_type']==3) {
-                    include("navbar_admin.php");
-        }
+            include("navbar_user.php");
         }
 	?>
 </head>
@@ -29,13 +22,14 @@
             include('content.php');
         ?>
         <?php
-        }else{
+        }else{                                                            
             if ($data['user_type']==1){
+                echo "<br/> <a href="."insertForm.php" . " class='"."btn btn-outline-primary btn-sm'".">สร้างโพสต์</a>" . " " ."<a href="."mypost.php" . " class='"."btn btn-outline-primary btn-sm'".">โพสต์ของฉัน</a>";
                 include('content.php');
             }elseif ($data['user_type']==2) {
-                echo "Hi employee";
+                echo "<br/> <a href=''" . " class='"."btn btn-outline-primary btn-sm'".">แก้ไขโพสต์</a>";
             }elseif ($data['user_type']==3) {
-                echo "Hi Admin!";
+                echo "<br/> <a href=''" . " class='"."btn btn-outline-primary btn-sm'".">แก้ไขโพสต์</a>" . " " . "<a href=''" . " class='"."btn btn-outline-primary btn-sm'".">แก้ไขข้อมูลผู้ใช้</a>";
             }else {
                 echo "Who?";
             }
