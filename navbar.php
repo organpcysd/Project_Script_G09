@@ -10,9 +10,8 @@
             <!-- Navbar Login,Register -->
             <form class="d-flex">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                        <a class="nav-link active" aria-current="page" id="login" href="login.php">Log in</a>
                         <a href="login.php" class="btn btn-primary">Log in</a>
-                        <a class="nav-link active" aria-current="page" id="register" href="register.php">Register</a>
+                        <a href="register.php" class="btn btn-primary">Register</a>
                 </ul>
             </form>
             </div>
