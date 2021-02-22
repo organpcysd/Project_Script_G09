@@ -34,40 +34,7 @@
 	header("Location: report_laundry.php");
 ?>
 
-<table class="table table-hover table-responsive-xl">
-<legend>แก้ไขโพสต์</legend>
-  <thead>
-    <tr>
-        <th>ID </th>
-      <th>Username</th>
-      <th>Topic</th>
-      <th>Status</th>
-      <th></th>
-    </tr>
 
-  <?php while ($row = mysqli_fetch_array($result)) {?>
-    <tr>
-      <td scope="row"><?php echo $row["id"]; ?></td>
-      <td> <?php echo $row["username"]; ?> </td>
-      <td> <?php echo $row["topic"]; ?> </td>
-      <td> <?php  echo $row ["content_check"]; ?> </td>
-
-      <?	ob_start();
-	session_start();
-	include("connect.php");
-	
-	$query = "UPDATE service2 SET 
-	status='pass'
-	WHERE id_ser='".$_GET['status']."'";
-	mysql_query($query)or die(mysql_error());
-	header("Location: report_laundry.php");
-?>
-      
-      
-    </tr>
-    <?php }?>
-  </tbody>
-</table>
 </head>
 <body>
 </html>
