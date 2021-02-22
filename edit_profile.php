@@ -1,36 +1,6 @@
 <html>
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <script src="showData.js"></script>
-    <script type="text/javascript">
-     function changeImg(imgID) {
-     if(imgID == 1) {
-     document.getElementById("pic").innerHTML='<img src="./images/avatar/avatar1.jpg">';
-     document.getElementById("hid").value="./images/avatar/avatar1.jpg";
 
-     } else if(imgID == 2) {
-     document.getElementById("pic").innerHTML='<img src="./images/avatar/avatar2.jpg">';
-     document.getElementById("hid").value="./images/avatar/avatar2.jpg";
-
-     } else if(imgID == 3) {
-     document.getElementById("pic").innerHTML='<img src="./images/avatar/avatar3.jpg">';
-     document.getElementById("hid").value="./images/avatar/avatar3.jpg";
-
-     } else if(imgID == 4) {
-     document.getElementById("pic").innerHTML='<img src="./images/avatar/avatar4.jpg">';
-     document.getElementById("hid").value="./images/avatar/avatar4.jpg";
-
-     } else if(imgID == 5) {
-     document.getElementById("pic").innerHTML='<img src="./images/avatar/avatar5.jpg">';
-     document.getElementById("hid").value="./images/avatar/avatar5.jpg";
-
-     } else if(imgID == 6) {
-     document.getElementById("pic").innerHTML='<img src="./images/avatar/avatar6.jpg">';
-     document.getElementById("hid").value="./images/avatar/avatar6.jpg";
- }
-}
-</script>
     <link rel= "stylesheet" type= "text/css" href= "mystyle.css">
     <?php    $con = mysqli_connect("play-hippy.net", "root", "Organ18032543","donatecenter");
         include("db.php");
@@ -62,16 +32,7 @@
                 <div class="content-panel">
                     <form class="form-horizontal" method = "post" action = "update_profile.php" enctype = "multipart/form-data">
                         <fieldset class="fieldset">
-                            <h3 class="fieldset-title">Personal Info</h3>
-                            <div class="form-group avatar">
-                                <figure class="figure col-md-2 col-sm-3 col-xs-12">
-                                <tr>
-                                    <td id="pic"><img  src="./images/avatar/avatar1.jpg"></td>
-                                    <td><input type="hidden" id="hid" name="avatar" value="./images/avatar/avatar1.jpg"></td>
-                                </tr>
-                                    <img class="img-rounded img-responsive" src="images/user/<?php   echo "" .$data ["image"] ;?> " class="card-img-top" style="height: 5rem;">
-                                </figure>
-                                <table align="center">
+                        <table align="center">
                                     <tr>
                                     
                                         <td><img src="./images/avatar/avatar1.jpg" id="ava1" width="45" onclick="changeImg(1)"></td>
@@ -87,6 +48,11 @@
                                         <td><img src="./images/avatar/avatar6.jpg" id="ava6" width="45" onclick="changeImg(6)"></td>
                                     </tr>
                                 </table>
+                            <h3 class="fieldset-title">Personal Info</h3>
+                            <div class="form-group avatar">
+                                <figure class="figure col-md-2 col-sm-3 col-xs-12">
+                                    <img class="img-rounded img-responsive" src="images/user/<?php   echo "" .$data ["image"] ;?> " class="card-img-top" style="height: 5rem;">
+                                </figure>
                                 <div class="form-inline col-md-10 col-sm-9 col-xs-12">
                                     <input type="file" name = "image" class="file-uploader pull-left">
                                 </div>
@@ -138,23 +104,26 @@
               $(document).ready(function(){
                 $("#ava1").click(function(){
                    $("body").css("backgroundColor","fcd1d1");
+                   $("td").css("color","red");
+                   $("label").css("color","red");
                 });
  
-                $("#ava2").dblclick(function(){
+                $("#ava2").click(function(){
                   $("body").css("backgroundColor","aee1e1");
+                  $("input").css("color","red");
                 });
 
-                $("#ava4").dblclick(function(){
+                $("#ava4").click(function(){
                   $("select").css("backgroundColor","fcd1d1");
                   $("input").css("backgroundColor","fcd1d1");
                 });
 
-                $("#ava5").mouseover(function(){
+                $("#ava5").click(function(){
                   $("select").hide();
                   $("input").hide();
                 });
 
-                $("#ava6").mouseout(function(){
+                $("#ava6").click(function(){
                   $("select").show();
                   $("input").show();
                 });
