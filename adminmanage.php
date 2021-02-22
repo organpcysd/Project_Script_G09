@@ -12,7 +12,7 @@
 <body>
 <form action="adminmanage.php" method="get" name = "myForm">
   <center>
-    <a href="insertForm.php">Insert</a>
+    <a href="insertForm_admin.php">Insert</a>
         <input list="name" name="search" onkeyup="searchName(this.value)">
             <datalist id="name">
                 <option value="%">
@@ -50,10 +50,10 @@
     <td align = "center" > <?php echo $row['username'] ?> </td>
     <td align = "center"> <?php echo $row['password'] ?> </td>
     <td align = "center"> <?php echo $row['fullname'] ?> </td>
-    <td align = "center"> <img src="<?php echo $row['image'] ?>" width="50"> </td>
+    <td align = "center"> <img src="images/user/<?php echo $row['image'] ?>" width="50"> </td>
     <td align = "center"> <?php echo $row['email'] ?> </td>
     <td align = "center"> <?php echo $row['user_type'] ?> </td>
-    <td align = "center"> <a href="editForm.php?ID='<?php echo $row['ID']; ?>'">Edit</a> <a href="delete.php?ID=' <?php echo $row['ID']; ?> '" onclick="return confirm('Are you sure to delete #id' + <?php echo $row['ID']; ?> + ' ?' );">Delete</a></td>
+    <td align = "center"> <a href="edit_admin.php?ID='<?php echo $row['ID']; ?>'">Edit</a> <a href="delete.php?ID=' <?php echo $row['ID']; ?> '" onclick="return confirm('Are you sure to delete #id' + <?php echo $row['ID']; ?> + ' ?' );">Delete</a></td>
     </tr>
     <?php
     }

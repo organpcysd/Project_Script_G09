@@ -1,4 +1,5 @@
 <?php
+
 // connect to the database
 $con = mysqli_connect("play-hippy.net", "root", "Organ18032543","donatecenter");
 if(!$con) {
@@ -29,3 +30,5 @@ if ($con->query($sql) == TRUE) {
 
 echo '<br> <a href="index.php"> Go to home </a></td>';
 ?>
+
+
