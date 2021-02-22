@@ -2,8 +2,8 @@
 include('header.php');
 include('db.php');
  
-  //2. query ข้อมูลจากตาราง usre: 
-$query = "SELECT * FROM user ORDER BY username asc" or die("Error:" . mysqli_error()); 
+  //2. query ข้อมูลจากตาราง content: 
+$query = "SELECT * FROM content ORDER BY topic asc" or die("Error:" . mysqli_error()); 
 //3.เก็บข้อมูลที่ query ออกมาไว้ในตัวแปร result . 
 $result = mysqli_query($con, $query); 
 
@@ -14,20 +14,24 @@ echo "<table class='table table-sm'>";
 
 //หัวข้อตาราง
 echo "<tr align='center' bgcolor='a4ebf3'>
-<td>Uername</td>
-<td>รหัสผ่าน</td>
-<td>ชื่อ-นามสกุล</td>
-<td>อีเมล์</td>
-<td>ประเภทผู้ใช้</td>
+<td>หัวข้อ</td>
+<td> รูปภาพ</td>
+<td>รายละเอียด</td>
+<td>ที่อยู่</td>
+<td>อีเมล</td>
+<td>โทร</td>
+
 </tr>";
+
 while($row = mysqli_fetch_array($result)) { 
   
   echo "<tr align='center'>";
-  echo "<td>" .$row["username"] .  "</td> ";  
-  echo "<td>" .$row["password"] .  "</td> "; 
-  echo "<td>" .$row["fullname"] .  "</td> ";
+  echo "<td>" .$row["topic"] .  "</td> ";  
+  echo "<td>" .$row["topic_show"] .  "</td> ";  
+  echo "<td>" .$row["detail"] .  "</td> "; 
+  echo "<td>" .$row["address"] .  "</td> ";
   echo "<td>" .$row["email"] .  "</td> ";
-  echo "<td>" .$row["user_type"] .  "</td> ";
+  echo "<td>" .$row["tel"] .  "</td> ";
  
 }
 echo "</table>";

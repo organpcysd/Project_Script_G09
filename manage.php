@@ -28,7 +28,7 @@
 <body>
     <div class="container" ><center>
     <table class="usermange" style="align:center" >
-      <tr><br>
+                <tr><br>
                     <th> Username : </th>
                     <td> <input type = "text" name = "name0" id = "name0" value = <?php   echo "" .$data ["username"] ;?>></td>
                 </tr>
@@ -42,11 +42,6 @@
                     <th> Email : </th>
                     <td> <input type = "text" name = "email0" id= "email0" value = <?php   echo "" .$data ["email"] ;?>></td>
                 </tr> 
-                
-                <tr>
-                    <th> Tel : </th>
-                    <td> <input type = "text" name = "tel0" id= "tel0" value = <?php   echo "" .$data ["tel"] ;?>></td>
-                </tr>
 
                 <tr>
                     <th> Image : </th>

@@ -8,8 +8,8 @@
           </a>
          <!-- Navbar Login,Register -->
           <div>
-            <a href="login.php" class="btn btn-outline-primary btn-sm">Log in</a>
-            <a href="register.php" class="btn btn-primary btn-sm">Register</a>
+            <a href="login.php" class="btn btn-success btn-sm">Log in</a>
+            <a href="register.php" class="btn btn-outline-success btn-sm">Register</a>
           </div>
         </div>
     </nav>
