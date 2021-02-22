@@ -7,6 +7,12 @@ if(!$con) {
   }else{
   echo "";
   }
+  if(move_uploaded_file($_FILES["images"]["tmp_name"],"images/".$_FILES["images"]["name"]))
+        {
+            echo "Copy/Upload Complete<br>";
+    
+    
+        }
 $con->query("SET NAMES UTF8");
 
             $Topic = $_POST["topic"];
@@ -19,7 +25,7 @@ $con->query("SET NAMES UTF8");
 
 
 
-$sql="INSERT INTO content (topic,datail,address,tel,email,social,images) values ('$Topic,$Detail,$Address,$Tel,$Email,$Social,$Images')";
+$sql= "INSERT INTO content (topic,datail,address,tel,email,social,images) values ('$Topic,$Detail,$Address,$Tel,$Email,$Social,$Images)";
 
 
 if ($con->query($sql) == TRUE) {
@@ -29,6 +35,5 @@ if ($con->query($sql) == TRUE) {
 }
 
 echo '<br> <a href="index.php"> Go to home </a></td>';
-?>
 
-
+?> 

@@ -6,17 +6,20 @@
 ?>
 
 <body>
-<form action="insert.php" method="post" autocomplete="on" enctype="multipart/form-data">
+<form action="insert.php" method="post">
 
 <div class="container p-3 my-3 border">
 <legend>แบบฟอร์มเสนอมูลนิธิ สถานที่ รับบริจาค</legend>
+
 <b> ชื่อมูลนิธิ,สถานที่ ที่รับบริจาค</b><br>
 <input type="text" id="Topic"name="topic" >
 <br>
+
     <b>รายละเอียดการรับบริจาค</b> <br>
     <textarea id="Detail"  rows="4" cols="50" name="detail" >
     </textarea>
     <br>
+    
     <b>ข้อมูลการติดต่อ </b><br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;
