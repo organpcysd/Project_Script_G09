@@ -23,9 +23,9 @@
     <?php
     if (isset($_GET["search"])) {
         $name = $_GET["search"];
-        $sql="SELECT * FROM user WHERE Fullname LIKE '$name'";
+        $sql="SELECT * FROM user WHERE username LIKE '$name'";
        } else {
-        $sql="SELECT * FROM register";
+        $sql="SELECT * FROM user";
        }
     // get results from database
     $sql="SELECT * FROM user";
