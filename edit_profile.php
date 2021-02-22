@@ -27,17 +27,17 @@
                         <table align="Center">
                                     <tr>
                                     
-                                        <td><img src="./images/avatar/avatar1.jpg" id="ava1" width="45" onclick="changeImg(1)"></td>
+                                        <td><img src="./images/avatar/avatar1.png" id="ava1" width="45" onclick="changeImg(1)"></td>
                                     
-                                        <td><img src="./images/avatar/avatar2.jpg" id="ava2" width="45" onclick="changeImg(2)"></td>
+                                        <td><img src="./images/avatar/avatar2.png" id="ava2" width="45" onclick="changeImg(2)"></td>
                                     
-                                        <td><img src="./images/avatar/avatar3.jpg" id="ava3" width="45" onclick="changeImg(3)"></td>
+                                        <td><img src="./images/avatar/avatar3.png" id="ava3" width="45" onclick="changeImg(3)"></td>
                                     
-                                        <td><img src="./images/avatar/avatar4.jpg" id="ava4" width="45" onclick="changeImg(4)"></td>
+                                        <td><img src="./images/avatar/avatar4.png" id="ava4" width="45" onclick="changeImg(4)"></td>
                                     
-                                        <td><img src="./images/avatar/avatar5.jpg" id="ava5" width="45" onclick="changeImg(5)"></td>
+                                        <td><img src="./images/avatar/avatar5.png" id="ava5" width="45" onclick="changeImg(5)"></td>
                                     
-                                        <td><img src="./images/avatar/avatar6.jpg" id="ava6" width="45" onclick="changeImg(6)"></td>
+                                        <td><img src="./images/avatar/avatar6.png" id="ava6" width="45" onclick="changeImg(6)"></td>
                                     </tr>
                                 </table>
                             <h3 class="fieldset-title">ข้อมูลส่วนตัว</h3>
@@ -116,7 +116,7 @@
                 });
 
                 $("#ava6").click(function(){
-                   $("body").css("backgroundColor","fde8cd");
+                   $("body").css("backgroundColor","c5d7bd");
                 });
 
 });
