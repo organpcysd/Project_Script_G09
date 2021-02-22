@@ -23,9 +23,9 @@
     <?php
     if (isset($_GET["search"])) {
         $name = $_GET["search"];
-        $sql="SELECT * FROM user WHERE Fullname LIKE '$name'";
+        $sql="SELECT * FROM user WHERE username LIKE '$name'";
        } else {
-        $sql="SELECT * FROM register";
+        $sql="SELECT * FROM user";
        }
     // get results from database
     $sql="SELECT * FROM user";
@@ -53,7 +53,7 @@
     <td align = "center"> <img src="images/user/<?php echo $row['image'] ?>" width="50"> </td>
     <td align = "center"> <?php echo $row['email'] ?> </td>
     <td align = "center"> <?php echo $row['user_type'] ?> </td>
-    <td align = "center"> <a href="editForm_admin.php?ID='<?php echo $row['id']; ?>'">Edit</a> <a href="delete_admin.php?ID=' <?php echo $row['id']; ?> '" onclick="return confirm('Are you sure to delete #id' + <?php echo $row['ID']; ?> + ' ?' );">Delete</a></td>
+    <td align = "center"> <a href="editForm_admin.php?ID='<?php echo $row['id']; ?>'">Edit</a> <a href="delete_admin.php?ID=' <?php echo $row['id']; ?> '" onclick="return confirm('Are you sure to delete #id' + <?php echo $row['id']; ?> + ' ?' );">Delete</a></td>
     </tr>
     <?php
     }
