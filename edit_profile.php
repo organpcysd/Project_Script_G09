@@ -24,26 +24,12 @@
                 <div class="content-panel">
                     <form class="form-horizontal" method = "post" action = "update_profile.php" enctype = "multipart/form-data">
                         <fieldset class="fieldset">
-                        <table align="Center">
-                                    <tr>
-                                    
-                                        <td><img src="./images/avatar/avatar1.png" id="ava1" width="45" onclick="changeImg(1)"></td>
-                                    
-                                        <td><img src="./images/avatar/avatar2.png" id="ava2" width="45" onclick="changeImg(2)"></td>
-                                    
-                                        <td><img src="./images/avatar/avatar3.png" id="ava3" width="45" onclick="changeImg(3)"></td>
-                                    
-                                        <td><img src="./images/avatar/avatar4.png" id="ava4" width="45" onclick="changeImg(4)"></td>
-                                    
-                                        <td><img src="./images/avatar/avatar5.png" id="ava5" width="45" onclick="changeImg(5)"></td>
-                                    
-                                        <td><img src="./images/avatar/avatar6.png" id="ava6" width="45" onclick="changeImg(6)"></td>
-                                    </tr>
-                                </table>
+                        <br/>
+                        <br/>
                             <h3 class="fieldset-title">ข้อมูลส่วนตัว</h3>
                             <div class="form-group avatar">
                                 <figure class="figure col-md-2 col-sm-3 col-xs-12">
-                                    <img class="img-rounded img-responsive" src="images/user/<?php   echo "" .$data ["image"] ;?> " class="card-img-top" style="width: 150npx">
+                                    <img class="img-rounded img-responsive" src="images/user/<?php   echo "" .$data ["image"] ;?> " class="card-img-top" style="width: 150px">
                                 </figure>
                                 <div class="form-inline col-md-10 col-sm-9 col-xs-12">
                                     <input type="file" name = "image" class="file-uploader pull-left">
