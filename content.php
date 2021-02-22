@@ -19,7 +19,6 @@ while ($row = mysqli_fetch_array($result)) {
       <img src="images/content/<?php echo $row['images']; ?>" class="card-img-top" style="height: 15rem;">
       <div class="card-body">
         <h5 class="card-title"><?php echo $row['topic']; ?></h5>
-        <p class="card-text"><?php echo $row['detail']; ?></p>
         <center><a href="content_details.php?ID='<?php echo $row['id']; ?>'" class="btn btn-primary">รายละเอียด</a></center>
       </div>
     </div>
