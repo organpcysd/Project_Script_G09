@@ -4,12 +4,10 @@
     <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.php">
-            Home
+            DONATE CENTER
           </a>
          <!-- Navbar Login,Register -->
           <div>
-            <a href="#" class="btn btn-outline-primary btn-sm">Edit Post</a>
-            <a href="#" class="btn btn-outline-primary btn-sm">Edit User</a>
             <a href="#" class="btn btn-outline-primary btn-sm">Manage Account</a>
             <a href="logout.php" class="btn btn-danger btn-sm">Log out</a>
           </div>
