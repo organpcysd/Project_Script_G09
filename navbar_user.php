@@ -8,8 +8,8 @@
           </a>
          <!-- Navbar Login,Register -->
           <div>
-            <a href="#" class="btn btn-outline-primary btn-sm">Manage Account</a>
-            <a href="logout.php" class="btn btn-danger btn-sm">Log out</a>
+            <a href="#" class="btn btn-outline-primary btn-sm">จัดการบัญชี</a>
+            <a href="logout.php" class="btn btn-danger btn-sm">ออกจากระบบ</a>
           </div>
         </div>
     </nav>
