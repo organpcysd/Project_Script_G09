@@ -12,7 +12,7 @@
 <body>
 <form action="adminmanage.php" method="get" name = "myForm">
   <center>
-    <a href="insertForm.php?ID='<?php echo $row['ID']; ?>'">Insert</a>
+    <a href="insertForm.php">Insert</a>
         <input list="name" name="search" onkeyup="searchName(this.value)">
             <datalist id="name">
                 <option value="%">
