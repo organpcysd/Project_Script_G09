@@ -1,45 +1,45 @@
-<html>
-<?php   
-       include("db.php");
-       include("header.php");
-       session_start();
-       if (!isset($_SESSION['username'])) {
-           include("navbar.php");
-       }else{
-           $username = $_SESSION['username'];
-           $sql = "SELECT * FROM user WHERE username = '" . $username . "'";
-           $rs = mysqli_query($con,$sql);
-           $data = mysqli_fetch_array($rs);
-           include("navbar_user.php");
-       }
-       ?>
-
-
-<div class="container p-3 my-3 border">
-  <fieldset>
-    <legend>โพสต์ของฉัน</legend>
-    <body>
-    <div class="container">
-        <?php
+<?php 
+include('header.php');
+include('db.php');
+session_start();
         if (!isset($_SESSION['username'])) {
-            include('content.php');
-        ?>
-        <?php
-        }else{                                                            
-            if ($data['user_type']==1){
-                echo "<br/> <a href="."insertForm.php" . " class='"."btn btn-outline-primary btn-sm'".">สร้างโพสต์</a>" ;
-                include('content.php');
-            }elseif ($data['user_type']==2) {
-                echo "<br/> <a href=''" . " class='"."btn btn-outline-primary btn-sm'".">แก้ไขโพสต์</a>";
-            }elseif ($data['user_type']==3) {
-                echo "<br/> <a href=''" . " class='"."btn btn-outline-primary btn-sm'".">สร้างโพสต์</a>" . " " . "<a href=''" . " class='"."btn btn-outline-primary btn-sm'".">แก้ไขข้อมูลผู้ใช้</a>";
-            }else {
-                echo "Who?";
-            }
-            echo "<a href="."logout.php".">ออกจากระบบ</a>";
+            include("navbar.php");
+        }else{
+            $username = $_SESSION['username'];
+            $sql = "SELECT * FROM user WHERE username = '" . $username . "'";
+            $rs = mysqli_query($con,$sql);
+            $data = mysqli_fetch_array($rs);
+            include("navbar_user.php");
         }
-        ?>
+echo "<div class='container p-3 my-3 border'>";
+echo "<table class='table table-sm'>";
+$query = "SELECT * FROM content WHERE username ='" . $username . "'" or die("Error:" . mysqli_error()); 
+$result = mysqli_query($con, $query); 
+?>
+<legend>โพสต์ของฉัน</legend>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+<?php
+while ($row = mysqli_fetch_array($result)) {
+    ?>
+  <div class="col">
+    <div class="card" style="width: 18rem;">
+      <img src="images/content/<?php echo $row['images']; ?>" class="card-img-top" style="height: 15rem;">
+      <div class="card-body">
+        <h5 class="card-title"><?php echo $row['topic']; ?></h5>
+        <p class="card-text">
+        <?php echo $row['detail']; ?> <br/>
+        สถานะ : <?php echo $row['content_check']; ?>
+        
+        </p>
+        <center>
+        <a href="content_details.php?ID='<?php echo $row['id']; ?>'" class="btn btn-primary">รายละเอียด</a>
+        </center>
+      </div>
     </div>
-</div>
-</body>
-</html>
+    <br/>
+    <br/>
+  </div>
+<?php
+}
+mysqli_close($con);
+?>

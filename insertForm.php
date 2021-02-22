@@ -16,13 +16,16 @@
 ?>
 
 <body>
-<form action="insert.php" method="post" enctype="multipart/form-data">
+<form action="insertForm.php" method="post" enctype="multipart/form-data">
+
+<input type = "hidden" name = "username"  value = "<?php echo $username; ?>">
 
 <div class="container p-3 my-3 border">
 <legend>แบบฟอร์มเสนอมูลนิธิ สถานที่ รับบริจาค</legend>
 
 <b> ชื่อมูลนิธิ,สถานที่ ที่รับบริจาค</b><br>
 <input type="text" id="Topic"name="topic" >
+
 <br>
 
     <b>รายละเอียดการรับบริจาค</b> <br>
@@ -68,4 +71,30 @@
 </Table>
 </body>
 </html>
+
+<?php
+if (isset($_POST['Save'])) {
+            $username = $_POST["username"];
+            $Topic = $_POST["topic"];
+            $Detail = $_POST["detail"];
+            $Address = $_POST["address"];
+            $Tel = $_POST['tel'];
+            $Email = $_POST["email"];
+            $Social = $_POST["social"];
+            $Images = $_FILES["images"]["name"];
+            $Content_type = $_REQUEST['content_type'];
+
+    $sql= "INSERT INTO content (username,topic,detail,address,tel,email,social,images,content_type) values ('$username','$Topic','$Detail','$Address','$Tel','$Email','$Social','$Images','$Content_type')";
+ //if press Login
+    if ($con->query($sql) == true) {
+        move_uploaded_file($_FILES["images"]["tmp_name"], "images/content/".$_FILES["images"]["name"]); ?>
+    <div class="alert alert-success" role="alert">
+        ส่งแบบฟอร์มสำเร็จ
+    </div>
+    <?php
+    } else {
+        echo "Error Insert record: " . $con->error;
+    }
+}
+?> 
     
