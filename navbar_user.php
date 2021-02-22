@@ -8,22 +8,12 @@
           </a>
          <!-- Navbar Login,Register -->
           <div>
-          <table align="Center">
-                                    <tr>
-                                    
-                                        <td><img src="./images/avatar/avatar1.png" id="ava1" width="45" onclick="changeImg(1)"></td>
-                                    
-                                        <td><img src="./images/avatar/avatar2.png" id="ava2" width="45" onclick="changeImg(2)"></td>
-                                    
-                                        <td><img src="./images/avatar/avatar3.png" id="ava3" width="45" onclick="changeImg(3)"></td>
-                                    
-                                        <td><img src="./images/avatar/avatar4.png" id="ava4" width="45" onclick="changeImg(4)"></td>
-                                    
-                                        <td><img src="./images/avatar/avatar5.png" id="ava5" width="45" onclick="changeImg(5)"></td>
-                                    
-                                        <td><img src="./images/avatar/avatar6.png" id="ava6" width="45" onclick="changeImg(6)"></td>
-                                    </tr>
-                                </table>
+            <img src="./images/avatar/avatar1.png" id="ava1" width="45" onclick="changeImg(1)">
+            <img src="./images/avatar/avatar2.png" id="ava2" width="45" onclick="changeImg(2)">
+            <img src="./images/avatar/avatar3.png" id="ava3" width="45" onclick="changeImg(3)">
+            <img src="./images/avatar/avatar4.png" id="ava4" width="45" onclick="changeImg(4)">
+            <img src="./images/avatar/avatar5.png" id="ava5" width="45" onclick="changeImg(5)">
+            <img src="./images/avatar/avatar6.png" id="ava6" width="45" onclick="changeImg(6)">
             <a href="edit_profile.php" class="btn btn-outline-primary btn-sm">จัดการบัญชี</a>
             <a href="logout.php" class="btn btn-danger btn-sm">ออกจากระบบ</a>
           </div>
@@ -32,11 +22,11 @@
     <script>
               $(document).ready(function(){
                 $("#ava1").click(function(){
-                   $("body").css("backgroundColor","fcd1d1");
+                   $("body").css("backgroundColor","#fcd1d1");
                 });
  
                 $("#ava2").click(function(){
-                  $("body").css("backgroundColor","aee1e1");
+                  $("body").css("backgroundColor","#aee1e1");
                 });
                 
                 $("#ava3").click(function(){
@@ -44,15 +34,15 @@
                 });
 
                 $("#ava4").click(function(){
-                   $("body").css("backgroundColor","1687a7");
+                   $("body").css("backgroundColor","#1687a7");
                 });
 
                 $("#ava5").click(function(){
-                   $("body").css("backgroundColor","a98b98");
+                   $("body").css("backgroundColor","#a98b98");
                 });
 
                 $("#ava6").click(function(){
-                   $("body").css("backgroundColor","c5d7bd");
+                   $("body").css("backgroundColor","#c5d7bd");
                 });
 
 });
