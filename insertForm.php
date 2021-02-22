@@ -53,7 +53,14 @@
 <br>
 <input type="file"id="Images" name="images"><br>
 <br>
+• หมวดหมู่
+<br>
+<input type="radio" name="education" value="education"> การศึกษา &nbsp;
+<input type="radio" name="animal" value="animal"> สัตว์ &nbsp;
+<input type="radio" name="donate" value="donate"> มูลนิธิต่าง ๆ
 
+<br>
+<br>
 <input type="submit" class="btn btn-success" name="Save" value="Save">
 <input type="reset" class="btn btn-primary " value="ล้างข้อมูล"></TD></TR>
 

@@ -12,6 +12,7 @@ $con->query("SET NAMES UTF8");
             $Email = $_POST["email"];
             $Social = $_POST["social"];
             $Images = $_FILES["images"]["name"];
+            
 
 
 
