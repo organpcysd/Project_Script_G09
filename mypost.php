@@ -27,7 +27,6 @@ while ($row = mysqli_fetch_array($result)) {
       <div class="card-body">
         <h5 class="card-title"><?php echo $row['topic']; ?></h5>
         <p class="card-text">
-        <?php echo $row['detail']; ?> <br/>
         สถานะ : <?php echo $row['content_check']; ?>
         
         </p>

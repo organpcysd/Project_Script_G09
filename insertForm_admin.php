@@ -1,4 +1,21 @@
 <!DOCTYPE html>
+<?php
+    
+    include("header.php");
+    include("db.php");
+    session_start();
+        if (!isset($_SESSION['username'])) {
+            include("navbar.php");
+        }else{
+            $username = $_SESSION['username'];
+            $sql = "SELECT * FROM user WHERE username = '" . $username . "'";
+            $rs = mysqli_query($con,$sql);
+            $data = mysqli_fetch_array($rs);
+            include("navbar_user.php");
+        }
+    
+    echo "<div class='container p-3 my-3 border'>";
+?>
 <form action="insert_admin.php" method="POST" enctype="multipart/form-data">
     <center>
         <table>
@@ -10,6 +27,7 @@
                     <input type = "text" name = "username" required>
                 </td>
             </tr>
+
             <tr>
                 <td>
                     Password :
@@ -32,13 +50,8 @@
                 <td>
                     Image :
                 </td>
-<<<<<<< Updated upstream
                 <td>                  
                     <input type="file" name="image" required>
-=======
-                <td>
-                    <input type = "text"  name = "image" required>
->>>>>>> Stashed changes
                 </td>
             </tr>
 
@@ -56,11 +69,7 @@
                 </td>
                 <td>
                     <input type = "submit" value="Save" name = "Save">
-<<<<<<< Updated upstream
                     <input type="button" onclick="location.href='adminmanage.php'" value="Cancel" />
-=======
-                    <input type="button" onclick="location.href='view.php'" value="Cancel" />
->>>>>>> Stashed changes
                 </td>
             </tr>
         </table>
