@@ -12,6 +12,7 @@
 <body>
 <form action="adminmanage.php" method="get" name = "myForm">
   <center>
+    <a href="insertForm.php">Insert</a>
         <input list="name" name="search" onkeyup="searchName(this.value)">
             <datalist id="name">
                 <option value="%">
@@ -40,7 +41,7 @@
     <th>Image</th>
     <th>Email</th>
     <th>User Type</th>
-    <th>insert/delete/edit</th>
+    <th>delete/edit</th>
      </tr>";
     // loop through results of database query, displaying them in the table
     while($row=mysqli_fetch_array($rs)) {?>
@@ -52,7 +53,7 @@
     <td align = "center"> <img src="<?php echo $row['image'] ?>" width="50"> </td>
     <td align = "center"> <?php echo $row['email'] ?> </td>
     <td align = "center"> <?php echo $row['user_type'] ?> </td>
-    <td align = "center"> <a href="insertForm.php?ID='<?php echo $row['ID']; ?>'">Insert</a> <a href="editForm.php?ID='<?php echo $row['ID']; ?>'">Edit</a> <a href="delete.php?ID=' <?php echo $row['ID']; ?> '" onclick="return confirm('Are you sure to delete #id' + <?php echo $row['ID']; ?> + ' ?' );">Delete</a></td>
+    <td align = "center"> <a href="editForm.php?ID='<?php echo $row['ID']; ?>'">Edit</a> <a href="delete.php?ID=' <?php echo $row['ID']; ?> '" onclick="return confirm('Are you sure to delete #id' + <?php echo $row['ID']; ?> + ' ?' );">Delete</a></td>
     </tr>
     <?php
     }
