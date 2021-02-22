@@ -24,6 +24,7 @@
         <?php
         }else{
             if ($data['user_type']==1){
+                echo "<br/> <a href=''" . " class='"."btn btn-outline-primary btn-sm'".">สร้างโพสต์</a>";
                 include('content.php');
             }elseif ($data['user_type']==2) {
                 echo "Hi employee";
