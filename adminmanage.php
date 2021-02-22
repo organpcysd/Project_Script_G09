@@ -16,8 +16,11 @@
             $data = mysqli_fetch_array($rs);
             include("navbar_user.php");
         }
+
+        echo "<div class='container p-3 my-3 border'>";
         ?>
 </head>
+<center>
 <table class="table table-hover table-responsive-xl">
   <body>
       <?php
@@ -64,5 +67,6 @@
 
   </body>
 </table>
+<center>
 </form>
 </html>
