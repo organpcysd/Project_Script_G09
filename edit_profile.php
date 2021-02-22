@@ -32,7 +32,7 @@
                 <div class="content-panel">
                     <form class="form-horizontal" method = "post" action = "update_profile.php" enctype = "multipart/form-data">
                         <fieldset class="fieldset">
-                        <table align="center">
+                        <table align="Center">
                                     <tr>
                                     
                                         <td><img src="./images/avatar/avatar1.jpg" id="ava1" width="45" onclick="changeImg(1)"></td>
@@ -51,7 +51,7 @@
                             <h3 class="fieldset-title">Personal Info</h3>
                             <div class="form-group avatar">
                                 <figure class="figure col-md-2 col-sm-3 col-xs-12">
-                                    <img class="img-rounded img-responsive" src="images/user/<?php   echo "" .$data ["image"] ;?> " class="card-img-top" style="height: 5rem;">
+                                    <img class="img-rounded img-responsive" src="images/user/<?php   echo "" .$data ["image"] ;?> " class="card-img-top" style="width: 150px">
                                 </figure>
                                 <div class="form-inline col-md-10 col-sm-9 col-xs-12">
                                     <input type="file" name = "image" class="file-uploader pull-left">
@@ -59,9 +59,11 @@
                             </div>
                             <div class="form-group">
                                 <label class="col-md-2 col-sm-3 col-xs-12 control-label">User Name</label>
+                                <fieldset disabled>
                                 <div class="col-md-10 col-sm-9 col-xs-12">
                                     <input type="text" name = "username" class="form-control" value=<?php   echo "" .$data ["username"] ;?>>
                                 </div>
+                            </fieldset>
                             </div>
         
                             <div class="form-group">
@@ -104,28 +106,26 @@
               $(document).ready(function(){
                 $("#ava1").click(function(){
                    $("body").css("backgroundColor","fcd1d1");
-                   $("td").css("color","red");
-                   $("label").css("color","red");
                 });
  
                 $("#ava2").click(function(){
                   $("body").css("backgroundColor","aee1e1");
-                  $("input").css("color","red");
+                });
+                
+                $("#ava3").click(function(){
+                    $("body").css("backgroundColor","#FFC478");
                 });
 
                 $("#ava4").click(function(){
-                  $("select").css("backgroundColor","fcd1d1");
-                  $("input").css("backgroundColor","fcd1d1");
+                   $("body").css("backgroundColor","1687a7");
                 });
 
                 $("#ava5").click(function(){
-                  $("select").hide();
-                  $("input").hide();
+                   $("body").css("backgroundColor","a98b98");
                 });
 
                 $("#ava6").click(function(){
-                  $("select").show();
-                  $("input").show();
+                   $("body").css("backgroundColor","fde8cd");
                 });
 
 });
