@@ -10,6 +10,7 @@
                     <input type = "text" name = "username" required>
                 </td>
             </tr>
+
             <tr>
                 <td>
                     Password :
@@ -32,13 +33,8 @@
                 <td>
                     Image :
                 </td>
-<<<<<<< Updated upstream
                 <td>                  
                     <input type="file" name="image" required>
-=======
-                <td>
-                    <input type = "text"  name = "image" required>
->>>>>>> Stashed changes
                 </td>
             </tr>
 
@@ -56,11 +52,7 @@
                 </td>
                 <td>
                     <input type = "submit" value="Save" name = "Save">
-<<<<<<< Updated upstream
                     <input type="button" onclick="location.href='adminmanage.php'" value="Cancel" />
-=======
-                    <input type="button" onclick="location.href='view.php'" value="Cancel" />
->>>>>>> Stashed changes
                 </td>
             </tr>
         </table>
