@@ -1,4 +1,5 @@
-﻿<?php    
+﻿
+<?php    
         include("db.php");
 		include("header.php");
         session_start();
@@ -20,9 +21,9 @@
         }
         }
         
-                    $us  = $_POST['name0'];
-                    $em      = $_POST['email0'];
-                    $fn   = $_POST['fullname0'];
+                    $us  = $_POST["name0"];
+                    $em      = $_POST["email0"];
+                    $fn   = $_POST["fullname0"];
 	?>
 
     <?php   $qry = "UPDATE 'user'
