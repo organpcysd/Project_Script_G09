@@ -1,4 +1,21 @@
 <!DOCTYPE html>
+<?php
+    
+    include("header.php");
+    include("db.php");
+    session_start();
+        if (!isset($_SESSION['username'])) {
+            include("navbar.php");
+        }else{
+            $username = $_SESSION['username'];
+            $sql = "SELECT * FROM user WHERE username = '" . $username . "'";
+            $rs = mysqli_query($con,$sql);
+            $data = mysqli_fetch_array($rs);
+            include("navbar_user.php");
+        }
+    
+    echo "<div class='container p-3 my-3 border'>";
+?>
 <form action="insert_admin.php" method="POST" enctype="multipart/form-data">
     <center>
         <table>
