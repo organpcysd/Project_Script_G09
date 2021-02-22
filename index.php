@@ -24,12 +24,12 @@
         <?php
         }else{
             if ($data['user_type']==1){
-                echo "<br/> <a href=''" . " class='"."btn btn-outline-primary btn-sm'".">สร้างโพสต์</a>";
+                echo "<br/> <a href=''" . " class='"."btn btn-outline-primary btn-sm'".">สร้างโพสต์</a>" . " " ."<a href=''" . " class='"."btn btn-outline-primary btn-sm'".">โพสต์ของฉัน</a>";
                 include('content.php');
             }elseif ($data['user_type']==2) {
-                echo "Hi employee";
+                echo "<br/> <a href=''" . " class='"."btn btn-outline-primary btn-sm'".">แก้ไขโพสต์</a>";
             }elseif ($data['user_type']==3) {
-                echo "Hi Admin!";
+                echo "<br/> <a href=''" . " class='"."btn btn-outline-primary btn-sm'".">สร้างโพสต์</a>" . " " . "<a href=''" . " class='"."btn btn-outline-primary btn-sm'".">แก้ไขข้อมูลผู้ใช้</a>";
             }else {
                 echo "Who?";
             }
