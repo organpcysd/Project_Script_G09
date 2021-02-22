@@ -21,13 +21,15 @@
         }
         }
         
-                    $us  = $_POST["name0"];
-                    $em      = $_POST["email0"];
+                    $us  = $_POST["username0"];
                     $fn   = $_POST["fullname0"];
+                    $em      = $_POST["email0"];
+                    $tt   = $_POST["tel0"];
+                    $im      = $_POST["images0"];
 	?>
 
     <?php   $qry = "UPDATE 'user'
-                                                WHERE username  = $us,fullname = $fn,email = $em ";
+                                                WHERE username  = $us, fullname = $fn, email = $em, tel = $tt, images = $im ";
     $result = mysqli_query($con,$qry);
     if(!$result){
         echo "Error";
