@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<form action="adminmanage.php" method="get" name = "myForm">
+<form action="insertForm_admin.php" method="get" name = "myForm">
   <center>
     <a href="insertForm_admin.php">Insert</a>
         <input list="name" name="search" onkeyup="searchName(this.value)">
