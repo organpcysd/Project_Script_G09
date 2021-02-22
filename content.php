@@ -2,8 +2,8 @@
 include('header.php');
 include('db.php');
 
-$check = "ตรวจสอบแล้ว";
-$query = "SELECT * FROM content WHERE content_check ='" . $check . "' ORDER BY id asc" or die("Error:" . mysqli_error()); 
+$check = "ตรวจสอบเเล้ว";
+$query = "SELECT * FROM content WHERE content_check = '" . $check . "'"; 
 $result = mysqli_query($con, $query); 
 
 echo "<div class='container p-3 my-3 border'>";

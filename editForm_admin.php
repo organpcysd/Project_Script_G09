@@ -11,7 +11,6 @@
     
 ?>
 
-
 <body>
     <center>
     <form action="edit_admin.php" method="POST" enctype="multipart/form-data">
@@ -73,9 +72,8 @@
             </tr>
 
             <td>
-                    
-                    <input type = "submit" value="Save" name = "Save">
-                    <input type="button" onclick="location.href='adminmanage.php'" value="Cancel" />
+                    <input type = "submit" class="btn btn-success value="Save" name = "Save">
+                    <input type = "button" class="btn btn-danger" onclick="location.href='adminmanage.php'" value="Cancel" />
                 </td>
 
         </table>
