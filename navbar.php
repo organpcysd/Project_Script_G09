@@ -10,20 +10,17 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-            <form class="d-flex justify-content-end">
+            <!-- Navbar Login,Register -->
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                     <li class="nav-item">
-                        <a class="nav-link active" id="login" >Log in</a>
+                        <a class="nav-link active" aria-current="page" id="login" href="#">Log in</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" id="register">Register</a>
+                        <a class="nav-link active" aria-current="page" id="register" href="#">Register</a>
                     </li>
                 </ul>
             </div>
-            </form>
-<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
         </div>
     </nav>
 
