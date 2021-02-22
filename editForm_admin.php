@@ -3,15 +3,27 @@
     
     include("header.php");
     include("db.php");
+    session_start();
+        if (!isset($_SESSION['username'])) {
+            include("navbar.php");
+        }else{
+            $username = $_SESSION['username'];
+            $sql = "SELECT * FROM user WHERE username = '" . $username . "'";
+            $rs = mysqli_query($con,$sql);
+            $data = mysqli_fetch_array($rs);
+            include("navbar_user.php");
+        }
     $id = $_GET["ID"];
 
     $sql="SELECT*FROM user WHERE ID = $id";    
     $rs=$con->query($sql);
-    $row = $rs->fetch_assoc()
+    $row = $rs->fetch_assoc();
     
+    echo "<div class='container p-3 my-3 border'>";
 ?>
 
 <body>
+
     <center>
     <form action="edit_admin.php" method="POST" enctype="multipart/form-data">
     
@@ -57,7 +69,6 @@
                 Images :
                 </td>
                 <td>
-                    <img src="images/user/<?php echo $row['image'] ?>" width="50">
                     <input type="file" name="image" required>
                 </td>
             </tr>
@@ -71,13 +82,16 @@
                 </td>
             </tr>
 
-            <td>
+
+        </table>
+        <table>
+            <td style="text-align:center">
                     <input type = "submit" class="btn btn-success value="Save" name = "Save">
                     <input type = "button" class="btn btn-danger" onclick="location.href='adminmanage.php'" value="Cancel" />
-                </td>
-
+            </td>
         </table>
     </form>
     </center>
+
 </body>
 </html>
