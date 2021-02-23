@@ -10,35 +10,24 @@
             $sql = "SELECT * FROM user WHERE username = '" . $username . "'";
             $rs = mysqli_query($con,$sql);
             $data = mysqli_fetch_array($rs);
-          
+            include("navbar_user.php");
+        }
+            $fullname = $_POST["fullname"];
+            $password = $_POST["password"];
+            $email = $_POST["email"];
+            $image = $_FILES["image"]["name"];
+            $con = mysqli_connect("play-hippy.net", "root", "Organ18032543","donatecenter");
+            $con->query("SET NAMES UTF8");
+            // get results from database
+            $sql="UPDATE user SET fullname ='$fullname',password ='$password',email ='$email',image ='$image' WHERE username = '$username'";
+            $rs = mysqli_query($con,$sql);
 
-            if ($data['user_type']==1) {
-                    include("navbar_user.php");
-            }elseif ($data['user_type']==2) {
-                    include("navbar_employee.php");
-            }elseif ($data['user_type']==3) {
-                    include("navbar_admin.php");
-                }
+            if ($con->query($sql) == TRUE) {
+                move_uploaded_file($_FILES["image"]["tmp_name"], "images/user/". $_FILES["image"]["name"]);
+                echo " Updating Successfully!! ";
+            } else {
+                echo "Error updating record: " . $con->error;
             }
-        ?>
 
-<?php
-$fullname = $_POST["fullname"];
-$password = $_POST["password"];
-$email = $_POST["email"];
-$image = $_FILES["image"]["name"];
-$con = mysqli_connect("play-hippy.net", "root", "Organ18032543","donatecenter");
-$con->query("SET NAMES UTF8");
-// get results from database
-$sql="UPDATE user SET fullname ='$fullname',password ='$password',email ='$email',image ='$image' WHERE username = '$username'";
-$rs = mysqli_query($con,$sql);
-
-if ($con->query($sql) == TRUE) {
-    move_uploaded_file($_FILES["image"]["tmp_name"], "images/user/". $_FILES["image"]["name"]);
-    echo " Updating Successfully!! ";
-} else {
-    echo "Error updating record: " . $con->error;
-}
-
-echo '<br> <a href="index.php"> Go to home </a></td>';
+            echo '<br> <a href="index.php"> Go to home </a></td>';
 ?>
