@@ -11,7 +11,9 @@ session_start();
             $data = mysqli_fetch_array($rs);
             include("navbar_user.php");
         }
-echo "<div class='container p-3 my-3'>";
+        echo "<div class='container p-3 my-3'>";
+?>
+<?php
 echo "<br/> <a href="."insertForm.php" . " class='"."btn btn-success btn-sm'"."> 📝สร้างโพสต์</a> </i>";
 echo "<div class='container p-3 my-3 border'>";
 $query = "SELECT * FROM content ORDER BY id asc" or die("Error:" . mysqli_error()); 
