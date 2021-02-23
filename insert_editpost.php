@@ -19,7 +19,7 @@ $sql= "UPDATE content SET topic='$Topic',detail='$Detail',address='$Address',tel
 
 
 if ($con->query($sql) == TRUE) {
-    echo " Update Successfully!! ";
+    header('Location: manage_post.php');
 } else {
     echo "Error Update record: " . $con->error;
 }

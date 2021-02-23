@@ -13,7 +13,7 @@ $sql="INSERT INTO user (fullname,username,password,email,image) values ('$us','$
 
 if ($con->query($sql) === true) {
     move_uploaded_file($_FILES["image"]["tmp_name"], "images/user/" . $_FILES["image"]["name"]);
-    echo " Insertion Successfully!! ";
+    header('Location: adminmanage.php');
 } else {
     echo "Error updating record: " . $con->error;
 }

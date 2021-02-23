@@ -20,9 +20,9 @@
         echo "<div class='container p-3 my-3 border'>";
         ?>
 </head>
+<a class = "btn btn-success btn-sm" a href="insertForm_admin.php">เพิ่มผู้ใช้</a>
 <center>
 <table class="table table-hover table-responsive-xl">
-<a class = "btn btn-outline-danger btn-sm" a href="insertForm_admin.php">Insert</a>
   <body>
       <?php
       if (isset($_GET["search"])) {
@@ -57,7 +57,7 @@
       <td align = "center"> <img src="images/user/<?php echo $row['image'] ?>" width="50"> </td>
       <td align = "center"> <?php echo $row['email'] ?> </td>
       <td align = "center"> <?php echo $row['user_type'] ?> </td>
-      <td align = "center"> <a class = "btn btn-outline-warning btn-sm" a href="editForm_admin.php?ID='<?php echo $row['id']; ?>'">Edit</a> <a class = "btn btn-outline-warning btn-sm" a href="delete_admin.php?ID=' <?php echo $row['id']; ?> '" onclick="return confirm('Are you sure to delete #id' + <?php echo $row['id']; ?> + ' ?' );">Delete</a></td>
+      <td align = "center"> <a class = "btn btn-info btn-sm" a href="editForm_admin.php?ID='<?php echo $row['id']; ?>'">Edit</a> <a class = "btn btn-danger btn-sm" a href="delete_admin.php?ID=' <?php echo $row['id']; ?> '" onclick="return confirm('Are you sure to delete #id' + <?php echo $row['id']; ?> + ' ?' );">Delete</a></td>
       </tr>
       <?php
       }

@@ -64,8 +64,8 @@
 
 <br>
 <br>
-<input type="submit" class="btn btn-success" name="Save" value="Save">
-<input type="reset" class="btn btn-primary " value="ล้างข้อมูล"></TD></TR>
+<input type="submit" class="btn btn-success" name="Save" value="ส่งแบบฟอร์ม">
+<input type="reset" class="btn btn-danger " value="ล้างข้อมูล"></TD></TR>
 
 </form>
 </Table>
@@ -84,8 +84,12 @@ if (isset($_POST['Save'])) {
             $Images = $_FILES["images"]["name"];
             $Content_type = $_REQUEST['content_type'];
 
-    $sql= "INSERT INTO content (username,topic,detail,address,tel,email,social,images,content_type) values ('$username','$Topic','$Detail','$Address','$Tel','$Email','$Social','$Images','$Content_type')";
+            $sql1 = "ALTER TABLE user AUTO_INCREMENT = 1";
+            $con->query($sql1);
+            
+            $sql= "INSERT INTO content (username,topic,detail,address,tel,email,social,images,content_type) values ('$username','$Topic','$Detail','$Address','$Tel','$Email','$Social','$Images','$Content_type')";
  //if press Login
+    
     if ($con->query($sql) == true) {
         move_uploaded_file($_FILES["images"]["tmp_name"], "images/content/".$_FILES["images"]["name"]); ?>
     <div class="alert alert-success" role="alert">

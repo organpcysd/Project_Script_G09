@@ -1,6 +1,5 @@
 <html>
 <head>
-
     <link rel= "stylesheet" type= "text/css" href= "mystyle.css">
     <?php    $con = mysqli_connect("play-hippy.net", "root", "Organ18032543","donatecenter");
         include("db.php");
@@ -15,6 +14,8 @@
             $data = mysqli_fetch_array($rs);
             include("navbar_user.php");
         }
+        echo "<div class='container p-3 my-3 border'>";
+        echo "<h3 class='fieldset-title'>ข้อมูลส่วนตัว</h3>";
 	?>
 </head>
 <body>
@@ -22,11 +23,10 @@
     <div class="view-account">
         <section class="module">
                 <div class="content-panel">
-                    <form class="form-horizontal" method = "post" action = "update_profile.php" enctype = "multipart/form-data">
+                    <form class="form-horizontal" method = "post" action = "edit_profile.php" enctype = "multipart/form-data">
                         <fieldset class="fieldset">
                         <br/>
                         <br/>
-                            <h3 class="fieldset-title">ข้อมูลส่วนตัว</h3>
                             <div class="form-group avatar">
                                 <figure class="figure col-md-2 col-sm-3 col-xs-12">
                                     <img class="img-rounded img-responsive" src="images/user/<?php   echo "" .$data ["image"] ;?> " class="card-img-top" style="width: 150px">
@@ -69,7 +69,7 @@
                         <hr>
                         <div class="form-group">
                             <div class="col-md-10 col-sm-9 col-xs-12 col-md-push-2 col-sm-push-3 col-xs-push-0">
-                                <input class="btn btn-success" type="submit" value="บันทึก">
+                                <input class="btn btn-success" type="submit" value="บันทึก" name="save">
                                 <input class="btn btn-danger" type = "reset" value="รีเซ็ต">
                             </div>
                         </div>
@@ -80,3 +80,27 @@
 </div>
 </body>
 </html>
+
+<?php
+if (isset($_POST['save'])) {
+    $fullname = $_POST["fullname"];
+    $password = $_POST["password"];
+    $email = $_POST["email"];
+    $image = $_FILES["image"]["name"];
+    $con->query("SET NAMES UTF8");
+    // get results from database
+    $sql1="UPDATE user SET fullname ='$fullname',password ='$password',email ='$email',image ='$image' WHERE username = '$username'";
+
+    if ($con->query($sql1) == true) {
+        move_uploaded_file($_FILES["image"]["tmp_name"], "images/user/". $_FILES["image"]["name"]);
+        echo("<meta http-equiv='refresh' content='1'>");
+        ?>
+        <div class="alert alert-success" role="alert">
+        แก้ไขสำเร็จ
+    </div>
+        <?php
+    } else {
+        echo "Error updating record: " . $con->error;
+    }
+}
+?>

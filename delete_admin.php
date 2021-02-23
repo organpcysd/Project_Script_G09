@@ -6,7 +6,7 @@ $id = $_GET["ID"];
 $sql="DELETE FROM user WHERE ID = $id";
 
 if ($con->query($sql) == TRUE) {
-    echo "ID " . $id . " Deleted Already!!";
+    header('Location: adminmanage.php');
 } else {
     echo "Error updating record: " . $con->error;
 }

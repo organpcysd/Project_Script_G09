@@ -69,7 +69,7 @@
                 Images :
                 </td>
                 <td>
-                    <input type="file" name="image" required>
+                    <input type="file" name="image">
                 </td>
             </tr>
 
