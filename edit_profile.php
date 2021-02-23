@@ -53,7 +53,7 @@
                             <div class="form-group">
                                 <label class="col-md-2 col-sm-3 col-xs-12 control-label">รหัสผ่าน</label>
                                 <div class="col-md-10 col-sm-9 col-xs-12">
-                                    <input type="text" name = "password" class="form-control" value=<?php   echo "" .$data ["password"] ;?>>
+                                    <input type="password" name = "password" class="form-control" value=<?php   echo "" .$data ["password"] ;?>>
                                 </div>
                             </div>
                         </fieldset>
