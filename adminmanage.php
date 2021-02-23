@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
-<title></title>
-<script src="showName.js"></script>
 <head>
+  <script src="showname.js"></script>
   <?php
         include("header.php");
         include("db.php");
@@ -20,10 +19,22 @@
         echo "<div class='container p-3 my-3 border'>";
         ?>
 </head>
+
 <a class = "btn btn-success btn-sm" a href="insertForm_admin.php">เพิ่มผู้ใช้</a>
 <center>
 <table class="table table-hover table-responsive-xl">
+
   <body>
+  <center>
+<form action="adminmanage.php" method="get">
+      <input list="name" name="search" onkeyup="searchName(this.value)">
+      <datalist id="name">
+        <option value="%">
+      </datalist>
+      <input type="submit" class="btn btn-success btn-sm" value="ค้นหา">
+    </form>
+</center>
+
       <?php
       if (isset($_GET["search"])) {
           $name = $_GET["search"];
@@ -31,6 +42,7 @@
         } else {
           $sql="SELECT * FROM user";
         }
+
       // get results from database
       $sql="SELECT * FROM user";
       $rs=$con->query($sql);
