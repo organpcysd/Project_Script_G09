@@ -82,11 +82,11 @@
 <script>
               $(document).ready(function(){
                 $("#ava1").click(function(){
-                   $("body").css("backgroundColor","fcd1d1");
+                   $("body").css("backgroundColor","#fcd1d1");
                 });
  
                 $("#ava2").click(function(){
-                  $("body").css("backgroundColor","aee1e1");
+                  $("body").css("backgroundColor","#beebe9");
                 });
                 
                 $("#ava3").click(function(){
@@ -94,15 +94,15 @@
                 });
 
                 $("#ava4").click(function(){
-                   $("body").css("backgroundColor","1687a7");
+                   $("body").css("backgroundColor","#8ac6d1");
                 });
 
                 $("#ava5").click(function(){
-                   $("body").css("backgroundColor","a98b98");
+                   $("body").css("backgroundColor","#e1ccec");
                 });
 
                 $("#ava6").click(function(){
-                   $("body").css("backgroundColor","c5d7bd");
+                   $("body").css("backgroundColor","#c5d7bd");
                 });
 
 });
