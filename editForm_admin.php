@@ -51,7 +51,7 @@
                     Password :
                 </td>
                 <td>
-                    <input type = "text" name = "password" value = "<?php echo $row['password'] ?>">
+                    <input type = "password" name = "password" value = "<?php echo $row['password'] ?>">
                 </td>
             </tr>
 
