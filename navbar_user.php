@@ -26,7 +26,7 @@
                 });
  
                 $("#ava2").click(function(){
-                  $("body").css("backgroundColor","#aee1e1");
+                  $("body").css("backgroundColor","#beebe9");
                 });
                 
                 $("#ava3").click(function(){
@@ -34,11 +34,11 @@
                 });
 
                 $("#ava4").click(function(){
-                   $("body").css("backgroundColor","#1687a7");
+                   $("body").css("backgroundColor","#8ac6d1");
                 });
 
                 $("#ava5").click(function(){
-                   $("body").css("backgroundColor","#c9cbff");
+                   $("body").css("backgroundColor","#e1ccec");
                 });
 
                 $("#ava6").click(function(){
