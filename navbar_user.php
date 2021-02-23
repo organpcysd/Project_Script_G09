@@ -8,7 +8,6 @@
           </a>
          <!-- Navbar Login,Register -->
           <div>
-<<<<<<< HEAD
             <img src="./images/avatar/avatar1.png" id="ava1" width="45" onclick="changeImg(1)">
             <img src="./images/avatar/avatar2.png" id="ava2" width="45" onclick="changeImg(2)">
             <img src="./images/avatar/avatar3.png" id="ava3" width="45" onclick="changeImg(3)">
@@ -22,16 +21,6 @@
   <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z"/>
   <path d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117zM11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5zM4 1.934V15h6V1.077l-6 .857z"/>
 </svg>ออกจากระบบ</a>
-=======
-            <img src="./images/avatar/1.png" id="ava1" width="45" onclick="changeImg(1)">
-            <img src="./images/avatar/2.png" id="ava2" width="45" onclick="changeImg(2)">
-            <img src="./images/avatar/3.png" id="ava3" width="45" onclick="changeImg(3)">
-            <img src="./images/avatar/4.png" id="ava4" width="45" onclick="changeImg(4)">
-            <img src="./images/avatar/5.png" id="ava5" width="45" onclick="changeImg(5)">
-            <img src="./images/avatar/6.png" id="ava6" width="45" onclick="changeImg(6)">
-            <a href="edit_profile.php" class="btn btn-outline-primary btn-sm">จัดการบัญชี</a>
-            <a href="logout.php" class="btn btn-danger btn-sm">ออกจากระบบ</a>
->>>>>>> f20629287c897260c38703efac5d6803b8c56e9f
           </div>
         </div>
     </nav>
@@ -42,7 +31,7 @@
                 });
  
                 $("#ava2").click(function(){
-                  $("body").css("backgroundColor","#beebe9");
+                  $("body").css("backgroundColor","#aee1e1");
                 });
                 
                 $("#ava3").click(function(){
@@ -50,11 +39,11 @@
                 });
 
                 $("#ava4").click(function(){
-                   $("body").css("backgroundColor","#e57986");
+                   $("body").css("backgroundColor","#1687a7");
                 });
 
                 $("#ava5").click(function(){
-                   $("body").css("backgroundColor","#e1ccec");
+                   $("body").css("backgroundColor","#c9cbff");
                 });
 
                 $("#ava6").click(function(){
