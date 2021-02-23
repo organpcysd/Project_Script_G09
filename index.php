@@ -23,14 +23,14 @@
         ?>
         <?php
         }else{                                                            
-            if ($data['user_type']==1){
+            if ($data['user_type']=="user"){
                 
                 echo "<br/> <a href="."insertForm.php" . " class='"."btn btn-outline-primary btn-sm'"."> 📝สร้างโพสต์</a> </i>" . " " ."<a href="."mypost.php" . " class='"."btn btn-outline-primary btn-sm'".">📁โพสต์ของฉัน</a>";
                 include('content.php');
-            }elseif ($data['user_type']==2) {
+            }elseif ($data['user_type']=="employee") {
                 echo "<br/> <a href='manage_post.php'" . " class='"."btn btn-outline-primary btn-sm'".">📑จัดการโพสต์</a>";
                 include('content.php');
-            }elseif ($data['user_type']==3) {
+            }elseif ($data['user_type']=="admin") {
                 echo "<br/> <a href='manage_post.php'" . " class='"."btn btn-outline-primary btn-sm'".">📑จัดการโพสต์</a>" . " " . "<a href='adminmanage.php'" . " class='"."btn btn-outline-primary btn-sm'".">👩🏻‍💼จัดการข้อมูลผู้ใช้</a>";
                 include('content.php');
             }else {

@@ -7,6 +7,7 @@ $ps = $_POST['password'];
 $em = $_POST['email'];
 $im = $_FILES['image']['name'];
 $sql1 = "ALTER TABLE user AUTO_INCREMENT = 1";
+$con->query($sql1);
 $con->query("SET NAMES UTF8");    
 $sql="INSERT INTO user (fullname,username,password,email,image) values ('$us','$fn','$ps','$em','$im')";
 

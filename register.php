@@ -67,7 +67,7 @@ if (isset($_POST['register'])) {
     $sql="INSERT INTO user (fullname,username,password,email) values ('$fullname','$username','$password','$email')";
     
     if ($con->query($sql) === true) {
-        echo " Insertion Successfully!! ";
+        header("Location: login.php");
     } else {
         echo "Error updating record: " . $con->error;
     }
