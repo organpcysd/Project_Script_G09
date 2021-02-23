@@ -37,7 +37,7 @@ $result = mysqli_query($con, $query);
       <td>
       <center>
       <a class = "btn btn-outline-warning btn-sm" href="edit_post.php?ID='<?php echo $row['id']; ?>'">Edit</a>
-      <a class = "btn btn-outline-warning btn-sm" href="delete.php?ID=' <?php echo $row['id']; ?> '" onclick="return confirm('Are you sure to delete #id' + <?php echo $row['id']; ?> + ' ?' );">Delete</a>
+      <a class = "btn btn-outline-warning btn-sm" href="delete_post.php?ID=' <?php echo $row['id']; ?> '" onclick="return confirm('Are you sure to delete #id' + <?php echo $row['id']; ?> + ' ?' );">Delete</a>
       </center>
       </td>
     </tr>

@@ -70,7 +70,7 @@
                         <div class="form-group">
                             <div class="col-md-10 col-sm-9 col-xs-12 col-md-push-2 col-sm-push-3 col-xs-push-0">
                                 <input class="btn btn-success" type="submit" value="บันทึก">
-                                <input class="btn btn-danger" type = "reset" value="ยกเลิก">
+                                <input class="btn btn-danger" type = "reset" value="รีเซ็ต">
                             </div>
                         </div>
                     </form>
@@ -79,32 +79,4 @@
     </div>
 </div>
 </body>
-<script>
-              $(document).ready(function(){
-                $("#ava1").click(function(){
-                   $("body").css("backgroundColor","#fcd1d1");
-                });
- 
-                $("#ava2").click(function(){
-                  $("body").css("backgroundColor","#beebe9");
-                });
-                
-                $("#ava3").click(function(){
-                    $("body").css("backgroundColor","#FFC478");
-                });
-
-                $("#ava4").click(function(){
-                   $("body").css("backgroundColor","#8ac6d1");
-                });
-
-                $("#ava5").click(function(){
-                   $("body").css("backgroundColor","#e1ccec");
-                });
-
-                $("#ava6").click(function(){
-                   $("body").css("backgroundColor","#c5d7bd");
-                });
-
-});
-            </script>
 </html>
