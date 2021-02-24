@@ -1,4 +1,5 @@
-<?php 
+
+<script src="showcontent_check.js"></script><?php 
 include('header.php');
 include('db.php');
 session_start();
@@ -21,6 +22,16 @@ $result = mysqli_query($con, $query);
 ?>
 
 <table class="table table-hover table-responsive-xl">
+<body>
+  <center>
+<form action="adminmanage.php" method="get">
+      <input list="name" name="search" onkeyup="searchName(this.value)">
+      <datalist id="name">
+        <option value="%">
+      </datalist>
+      <input type="submit" class="btn btn-success btn-sm" value="ค้นหา">
+    </form>
+</center>
   <thead>
     <tr>
       <th>Username</th>
