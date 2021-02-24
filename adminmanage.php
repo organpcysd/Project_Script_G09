@@ -30,25 +30,26 @@
   <body>
   <center>
 <form action="adminmanage.php" method="get">
-      <input list="name" name="search" onkeyup="searchName(this.value)">
-      <datalist id="name">
-        <option value="%">
-      </datalist>
+      <input type = "text" name="search" onkeyup="searchName(this.value)">
       <input type="submit" class="btn btn-success btn-sm" value="ค้นหา">
     </form>
 </center>
 
       <?php
-      if (isset($_GET["search"])) {
-          $name = $_GET["search"];
-          $sql="SELECT * FROM user WHERE username LIKE '$name'";
-        } else {
-          $sql="SELECT * FROM user";
-        }
 
       // get results from database
+    if (isset($_GET["search"])) {
+      $name = $_GET["search"];
+      $sql="SELECT * FROM user WHERE username LIKE '$name'";
+      if($name == ""){
+        $sql="SELECT * FROM user";
+      }
+    } else {
       $sql="SELECT * FROM user";
+    }
       $rs=$con->query($sql);
+
+
       echo "<br>";
       echo "<center>";
       echo "<table border='1' cellpadding='10' width=80%>"; //open table
