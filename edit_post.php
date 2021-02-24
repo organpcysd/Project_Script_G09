@@ -78,7 +78,7 @@
 </select>
 <br>
 <br>
-<input type="submit" class="btn btn-success" name="Save" value="Save">
+<input type="submit" class="btn btn-success" name="Save" value="บันทึกการแก้ไข">
 
 </form>
 </Table>

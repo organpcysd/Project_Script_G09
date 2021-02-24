@@ -17,7 +17,9 @@
     echo "<div class='container p-3 my-3 border'>";
 ?>
 <form action="insert_admin.php" method="POST" enctype="multipart/form-data">
+
     <center>
+    <legend>เพิ่มผู้ใช้งานระบบ</legend>
         <table>
             <tr>
                 <td>

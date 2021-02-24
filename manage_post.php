@@ -38,9 +38,9 @@ $result = mysqli_query($con, $query);
 </center>
   <thead>
     <tr>
-      <th>Username</th>
-      <th>Topic</th>
-      <th>Status</th>
+      <th>ผู้ใช้งาน</th>
+      <th>ชื่อโพสต์</th>
+      <th>สถานะการตรวจสอบ</th>
       <th></th>
     </tr>
   </thead>

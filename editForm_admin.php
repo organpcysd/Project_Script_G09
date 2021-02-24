@@ -26,7 +26,7 @@
 
     <center>
     <form action="edit_admin.php" method="POST" enctype="multipart/form-data">
-    
+    <legend>แก้ไขข้อมูล ผู้ใช้งาน</legend>
         <table >
             <tr>
                 <td>
@@ -84,10 +84,11 @@
 
 
         </table>
+        <br>
         <table>
             <td style="text-align:center">
-                    <input type = "submit" class="btn btn-success value="Save" name = "Save">
-                    <input type = "button" class="btn btn-danger" onclick="location.href='adminmanage.php'" value="Cancel" />
+                    <input type = "submit" class="btn btn-success"  value="บันทึกการแก้ไข" >
+                    <input type = "button" class="btn btn-danger" onclick="location.href='adminmanage.php'" value="ยกเลิกการแก้ไข" />
             </td>
         </table>
     </form>
