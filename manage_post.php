@@ -1,5 +1,8 @@
-
-<script src="showcontent_check.js"></script><?php 
+<!DOCTYPE html>
+<html>
+<head>
+<script src="searchName.js"></script>
+<?php 
 include('header.php');
 include('db.php');
 session_start();
@@ -14,6 +17,7 @@ session_start();
         }
         echo "<div class='container p-3 my-3'>";
 ?>
+</head>
 <?php
 echo "<br/> <a href="."insertForm.php" . " class='"."btn btn-success btn-sm'"."> 📝สร้างโพสต์</a> </i>";
 echo "<div class='container p-3 my-3 border'>";
@@ -24,7 +28,7 @@ $result = mysqli_query($con, $query);
 <table class="table table-hover table-responsive-xl">
 <body>
   <center>
-<form action="adminmanage.php" method="get">
+<form action="manage_post.php" method="get">
       <input list="name" name="search" onkeyup="searchName(this.value)">
       <datalist id="name">
         <option value="%">
@@ -56,3 +60,4 @@ $result = mysqli_query($con, $query);
     <?php }?>
   </tbody>
 </table>
+</html>
