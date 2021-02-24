@@ -4,7 +4,7 @@
     <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.php">
-          <img src="C:/xampp/htdocs/Project_Script_G09/images/avatar/donate.png" width="50" height="50">  DONATE CENTER
+          <img src="images/avatar/donate.png" width="50" height="50">  DONATE CENTER
           </a>
          <!-- Navbar Login,Register -->
           <div>
